@@ -490,6 +490,11 @@
 <li>不要使用with() {} 会让代码语义不是很清楚</li>
 <li>为全局代码使用命名空间，使用一个唯一的, 与工程/库相关的名字作为前缀标识. 比如, 你的工程是 “Project Sloth”, 那么命名空间前缀可取为 sloth.*.</li>
 </ul>
+<h3 id="静态资源引入规范-【强制】"><a href="#静态资源引入规范-【强制】" class="headerlink" title="静态资源引入规范  【强制】"></a>静态资源引入规范  【强制】</h3><ul>
+<li>资源原则只能引本域名下资源，测试资源上线前一定要检查替换</li>
+<li>cdn 资源不写协议名，例如<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <h3 id="注释-【尽量保持风格，但注释一定要有】"><a href="#注释-【尽量保持风格，但注释一定要有】" class="headerlink" title="注释 【尽量保持风格，但注释一定要有】"></a>注释 【尽量保持风格，但注释一定要有】</h3><p>//我们也遵循 C++ 代码注释风格 . 这也就是说你需要:</p>
 <ul>
 <li>行内注释使用 // 变量 的形式</li>
