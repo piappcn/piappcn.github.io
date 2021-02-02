@@ -1,37 +1,270 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang=中国>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="安装 安装完vscode 安装插件 koroFileHeader 选择  文件—-首选项 —— 设置    用户设置打开 settings.json 添加或者覆盖一下代码  12345678910111213141516&quot;fileheader.cursorMode&quot;: &amp;#123;&amp;#125;,&quot;fileheader.customMade&quot;: &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vscode 自动注释插件推荐">
+<meta property="og:url" content="http://yoursite.com/2021/02/01/vscode%20koroFileHeader/index.html">
+<meta property="og:site_name" content="HYTD">
+<meta property="og:description" content="安装 安装完vscode 安装插件 koroFileHeader 选择  文件—-首选项 —— 设置    用户设置打开 settings.json 添加或者覆盖一下代码  12345678910111213141516&quot;fileheader.cursorMode&quot;: &amp;#123;&amp;#125;,&quot;fileheader.customMade&quot;: &amp;#123;">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-02-01T11:43:39.214Z">
+<meta property="article:modified_time" content="2021-02-02T06:23:16.320Z">
+<meta property="article:author" content="hytd zjh">
+<meta property="article:tag" content="琥玥 科技">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>vscode 自动注释插件推荐</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
+    
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+    
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+    
+<link rel="stylesheet" href="/css/style.css">
 
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    
+<script src="/lib/jquery/jquery.min.js"></script>
 
-{% block content %}
+<meta name="generator" content="Hexo 5.3.0"></head>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
-
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">HYTD</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
     </div>
   </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
 
-{% endblock %}
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2021/02/02/nuxt/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2020/10/30/fe-readme/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&text=vscode 自动注释插件推荐"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&title=vscode 自动注释插件推荐"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&is_video=false&description=vscode 自动注释插件推荐"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=vscode 自动注释插件推荐&body=Check out this article: http://yoursite.com/2021/02/01/vscode%20koroFileHeader/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&title=vscode 自动注释插件推荐"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&title=vscode 自动注释插件推荐"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&title=vscode 自动注释插件推荐"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&title=vscode 自动注释插件推荐"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&name=vscode 自动注释插件推荐&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">2.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E5%A6%82%E4%B8%8B"><span class="toc-number">3.</span> <span class="toc-text">效果如下</span></a></li></ol>
+    </div>
+  </span>
+</div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        vscode 自动注释插件推荐
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">HYTD</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2021-02-01T11:43:39.214Z" itemprop="datePublished">2021-02-01</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li>安装完vscode 安装插件 koroFileHeader</li>
+<li>选择  文件—-首选项 —— 设置    用户设置打开 settings.json 添加或者覆盖一下代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&quot;fileheader.cursorMode&quot;: &#123;</span><br><span class="line">&#125;,</span><br><span class="line">&quot;fileheader.customMade&quot;: &#123;</span><br><span class="line">  &quot;Author&quot;: &quot;hyman&quot;, &#x2F;&#x2F; </span><br><span class="line">  &quot;Date&quot;: &quot;&quot;, &#x2F;&#x2F; 文件创建时间</span><br><span class="line">  &quot;LastEditors&quot;: &quot;hyman&quot;, &#x2F;&#x2F; 文件最后编辑者</span><br><span class="line">  &quot;LastEditTime&quot;: &quot;&quot;, &#x2F;&#x2F; 文件最后编辑时间</span><br><span class="line">  &quot;Description&quot;:&quot;请填写简介&quot;,</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">&quot;fileheader.configObj&quot;: &#123;</span><br><span class="line">  &quot;CheckFileChange&quot;: true, &#x2F;&#x2F; 默认关闭</span><br><span class="line">  &quot;wideSame&quot;: false, &#x2F;&#x2F; 设置为true开启</span><br><span class="line">  &quot;wideNum&quot;: 13, &#x2F;&#x2F; 字段长度 默认为13</span><br><span class="line">  &quot;createHeader&quot;: true &#x2F;&#x2F; 创建文件自动添加注释</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重新启动vscode  完成。</li>
+</ul>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul>
+<li>文件头部注释：</li>
+</ul>
+<p>在当前编辑文件中使用快捷键:window：ctrl+alt+i/mac：ctrl+cmd+i,即可生成文件头部注释。<br>可以自动创建创建时间更新和最后修改时间</p>
+<ul>
+<li>函数注释：</li>
+</ul>
+<p>将光标放在函数行或者将光标放在函数上方的空白行<br>使用快捷键window：ctrl+alt+t,mac：ctrl+cmd+t，即可生成函数注释。<br>事实上，函数注释在文件的任意位置都可生成，这里需要自己控制。</p>
+<h2 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a>效果如下</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">头部注释</span><br><span class="line">&lt;!--</span><br><span class="line"> * @Author: hyman</span><br><span class="line"> * @Date: 2021-02-01 19:43:39</span><br><span class="line"> * @LastEditors: hyman</span><br><span class="line"> * @LastEditTime: 2021-02-01 19:59:57</span><br><span class="line"> * @Description: 请填写简介</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">函数注释</span><br><span class="line">  &#x2F;**</span><br><span class="line">   * @description: </span><br><span class="line">   * @param &#123;*&#125; appId</span><br><span class="line">   * @param &#123;*&#125; bucket</span><br><span class="line">   * @param &#123;*&#125; region</span><br><span class="line">   * @param &#123;*&#125; folder</span><br><span class="line">   * @param &#123;*&#125; authUrl</span><br><span class="line">   * @return &#123;*&#125;</span><br><span class="line">   *&#x2F;</span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+
+
+
+      </div>
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">2.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E5%A6%82%E4%B8%8B"><span class="toc-number">3.</span> <span class="toc-text">效果如下</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&text=vscode 自动注释插件推荐"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&title=vscode 自动注释插件推荐"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&is_video=false&description=vscode 自动注释插件推荐"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=vscode 自动注释插件推荐&body=Check out this article: http://yoursite.com/2021/02/01/vscode%20koroFileHeader/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&title=vscode 自动注释插件推荐"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&title=vscode 自动注释插件推荐"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&title=vscode 自动注释插件推荐"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&title=vscode 自动注释插件推荐"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2021/02/01/vscode%20koroFileHeader/&name=vscode 自动注释插件推荐&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 hytd zjh
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+      
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+    </div>
+</body>
+</html>

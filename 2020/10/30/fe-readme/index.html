@@ -1,37 +1,328 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang=中国>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="保密制定 公司产品代码，项目代码，资料，不允许放到 github 等开源网站，一经发现严肃处理，并且保留追究其法律责任的权利  沟通例子：对甲方客户沟通问题  不要跟客户犟嘴。赢了也是输啦。目的是让他们帮忙解决问题。 客户要求超出需求，及时上报，理性沟通。不要直接搞，或者直接拒绝 客户给的项目资料要及时整理同步和同步，不要重复给客户要 需要客户帮忙添加的，例如开发权限之类的，要先内部收集名单，不要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端工作经验总结">
+<meta property="og:url" content="http://yoursite.com/2020/10/30/fe-readme/index.html">
+<meta property="og:site_name" content="HYTD">
+<meta property="og:description" content="保密制定 公司产品代码，项目代码，资料，不允许放到 github 等开源网站，一经发现严肃处理，并且保留追究其法律责任的权利  沟通例子：对甲方客户沟通问题  不要跟客户犟嘴。赢了也是输啦。目的是让他们帮忙解决问题。 客户要求超出需求，及时上报，理性沟通。不要直接搞，或者直接拒绝 客户给的项目资料要及时整理同步和同步，不要重复给客户要 需要客户帮忙添加的，例如开发权限之类的，要先内部收集名单，不要">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-10-30T02:21:13.281Z">
+<meta property="article:modified_time" content="2020-11-03T03:13:40.759Z">
+<meta property="article:author" content="hytd zjh">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>前端工作经验总结</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
+    
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+    
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+    
+<link rel="stylesheet" href="/css/style.css">
 
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    
+<script src="/lib/jquery/jquery.min.js"></script>
 
-{% block content %}
+<meta name="generator" content="Hexo 5.3.0"></head>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
-
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">HYTD</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
     </div>
   </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
 
-{% endblock %}
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2021/02/01/vscode%20koroFileHeader/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2020/07/05/FEDevelopmentOfAttention/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/10/30/fe-readme/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://yoursite.com/2020/10/30/fe-readme/&text=前端工作经验总结"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/10/30/fe-readme/&title=前端工作经验总结"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/10/30/fe-readme/&is_video=false&description=前端工作经验总结"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=前端工作经验总结&body=Check out this article: http://yoursite.com/2020/10/30/fe-readme/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://yoursite.com/2020/10/30/fe-readme/&title=前端工作经验总结"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://yoursite.com/2020/10/30/fe-readme/&title=前端工作经验总结"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/10/30/fe-readme/&title=前端工作经验总结"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://yoursite.com/2020/10/30/fe-readme/&title=前端工作经验总结"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/10/30/fe-readme/&name=前端工作经验总结&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%9D%E5%AF%86%E5%88%B6%E5%AE%9A"><span class="toc-number">1.</span> <span class="toc-text">保密制定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%9F%E9%80%9A%E4%BE%8B%E5%AD%90%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">沟通例子：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">沟通技巧：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A6%E9%A1%B9%E7%9B%AE%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">带项目常见问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">开发常见问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%B6%B3%EF%BC%9A"><span class="toc-number">6.</span> <span class="toc-text">不足：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E8%BA%AB%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">自身的一些问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AC%A2%E8%BF%8E%E5%BC%BA%E6%80%BB-boss-%E6%8C%87%E7%82%B9%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E4%B8%8D%E8%B6%B3"><span class="toc-number">8.</span> <span class="toc-text">欢迎强总 boss 指点工作中的不足</span></a></li></ol>
+    </div>
+  </span>
+</div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        前端工作经验总结
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">HYTD</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2020-10-30T02:21:13.281Z" itemprop="datePublished">2020-10-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="保密制定"><a href="#保密制定" class="headerlink" title="保密制定"></a>保密制定</h2><ul>
+<li>公司产品代码，项目代码，资料，不允许放到 github 等开源网站，一经发现严肃处理，并且保留追究其法律责任的权利</li>
+</ul>
+<h2 id="沟通例子："><a href="#沟通例子：" class="headerlink" title="沟通例子："></a>沟通例子：</h2><p>对甲方客户沟通问题</p>
+<ul>
+<li>不要跟客户犟嘴。赢了也是输啦。目的是让他们帮忙解决问题。</li>
+<li>客户要求超出需求，及时上报，理性沟通。不要直接搞，或者直接拒绝</li>
+<li>客户给的项目资料要及时整理同步和同步，不要重复给客户要</li>
+<li>需要客户帮忙添加的，例如开发权限之类的，要先内部收集名单，不要重复让客户帮忙添加</li>
+</ul>
+<h2 id="沟通技巧："><a href="#沟通技巧：" class="headerlink" title="沟通技巧："></a>沟通技巧：</h2><p>不要说</p>
+<ul>
+<li>你理解啦吗？</li>
+<li>你清楚啦吗？</li>
+<li>你能明白吗？</li>
+</ul>
+<p>改成</p>
+<ul>
+<li>我说清楚了吗？</li>
+</ul>
+<h2 id="带项目常见问题"><a href="#带项目常见问题" class="headerlink" title="带项目常见问题"></a>带项目常见问题</h2><ul>
+<li><p>需求，是最重要的，一定要明确了解需求<br>接到新需求之前，需要详细了解需求之后，再考虑是否能实现，实现的成本是否过大，如果有疑问需要跟产品再进行敲定具体需求，再进行具体开发<br>开发期间需要及时沟通需求，不能对需求有任何不懂或者疑问的地方，否则很可能会导致重新代码甚至项目延期。</p>
+</li>
+<li><p>项目规范：有 eslint 定义的规范一定要遵守。 原则上一定要有 eslint 文件定义规范 ， 没有的 eslint 文件的向上请示。（大家养成规范写法。 习惯了就不觉得费劲了）</p>
+</li>
+<li><p>项目脚手架 项目基础脚手架按照客户要求。没有的一定要向上请示。切勿自己盲目使用，导致后期迁移成本过高</p>
+</li>
+<li><p>内部沟通：尽量在群里沟通，拉对应的负责人。除非必要，不要私聊</p>
+</li>
+<li><p>合理安排任务：项目负责人不要把自己开发任务排的过于饱满，多把精力放到项目把控上，包括项目 进度，风险</p>
+</li>
+<li><p>暴露风险：负责人要有风险意识，项目负责人了解风险后，要及时同步到项目经理。</p>
+</li>
+<li><p>同步进度：开发进度，及时同步跟项目经理，测试，产品</p>
+</li>
+<li><p>资料收集：项目资料及时整理并发布到 tapd。</p>
+</li>
+<li><p>规划： 对项目进度，人力，节奏要有大致规划，不要卡卡盲目的进行。</p>
+</li>
+<li><p>早会晚会：新人带项目没有经验，你只要记得每天开早会晚会即可。重要的是把控和了解的进度和风险</p>
+</li>
+<li><p>客户管理：</p>
+</li>
+<li><p>沟通原则：跟客户沟通要温和，不跟客户犟嘴，不然你就算赢了，也是输啦。 目的让客户帮忙解决问题</p>
+</li>
+<li><p>沟通节奏：客户不合理的需求，最好能带下客户节奏，尽量能给出解决方案。给客户建议。</p>
+</li>
+<li><p>责任心： 给予自己的任务认真思考，提前完成，别延后</p>
+</li>
+<li><p>细心： 出现问题后，先找自己的原因，不要先入为主认为是别人的问题，沟通的时候，也要说你看是不是我这边的问题（尤其跟甲方沟通的时候）</p>
+</li>
+<li><p>别推延： 一定要做的事情一定提前做，不要非得被别人 diss 啦还得做</p>
+</li>
+</ul>
+<h2 id="开发常见问题"><a href="#开发常见问题" class="headerlink" title="开发常见问题"></a>开发常见问题</h2><ul>
+<li>责任心： 给予自己的任务认真思考，提前完成，别延后</li>
+<li>暴露风险：有风险的及时沟通，避免耽误进度</li>
+<li>紧急的问题，如果自己 20 分钟以内解决不了问题，优先请教同事，解决紧急问题之后，找时间自己去消化该问题。<br>一般的问题可以适量给自己多一点时间，如果没有思路一定要及时询问其他人</li>
+</ul>
+<h2 id="不足："><a href="#不足：" class="headerlink" title="不足："></a>不足：</h2><ul>
+<li>前端的内部分享做的不够<br>尽量抽出时间做技术分享</li>
+<li>前端的内部技术问题解决方案没有技术同步到其他人<br>整理出对应的文档</li>
+<li>项目风险无法及时暴露<br>做项目规划，规划计划，设计稿，静态页面，模拟接口，交互，真实接口，测试，提测的每个时间点！ 能明确看出来问题出在哪里。</li>
+</ul>
+<h2 id="自身的一些问题"><a href="#自身的一些问题" class="headerlink" title="自身的一些问题"></a>自身的一些问题</h2><ul>
+<li>参与项目少，了解项目需求少<br>多参于项目</li>
+<li>只关注组长，对成都这边基础员工了解不多<br>定期跟基础员工沟通</li>
+<li>精力过于分散，工作切换频繁，没有产出<br>优化工作流程，减少风险</li>
+</ul>
+<h2 id="欢迎强总-boss-指点工作中的不足"><a href="#欢迎强总-boss-指点工作中的不足" class="headerlink" title="欢迎强总 boss 指点工作中的不足"></a>欢迎强总 boss 指点工作中的不足</h2>
+  </div>
+</article>
+
+
+
+      </div>
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%9D%E5%AF%86%E5%88%B6%E5%AE%9A"><span class="toc-number">1.</span> <span class="toc-text">保密制定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%9F%E9%80%9A%E4%BE%8B%E5%AD%90%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">沟通例子：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">沟通技巧：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A6%E9%A1%B9%E7%9B%AE%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">带项目常见问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">开发常见问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%B6%B3%EF%BC%9A"><span class="toc-number">6.</span> <span class="toc-text">不足：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E8%BA%AB%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">自身的一些问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AC%A2%E8%BF%8E%E5%BC%BA%E6%80%BB-boss-%E6%8C%87%E7%82%B9%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E4%B8%8D%E8%B6%B3"><span class="toc-number">8.</span> <span class="toc-text">欢迎强总 boss 指点工作中的不足</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/10/30/fe-readme/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://yoursite.com/2020/10/30/fe-readme/&text=前端工作经验总结"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/10/30/fe-readme/&title=前端工作经验总结"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/10/30/fe-readme/&is_video=false&description=前端工作经验总结"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=前端工作经验总结&body=Check out this article: http://yoursite.com/2020/10/30/fe-readme/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://yoursite.com/2020/10/30/fe-readme/&title=前端工作经验总结"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://yoursite.com/2020/10/30/fe-readme/&title=前端工作经验总结"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/10/30/fe-readme/&title=前端工作经验总结"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://yoursite.com/2020/10/30/fe-readme/&title=前端工作经验总结"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/10/30/fe-readme/&name=前端工作经验总结&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 hytd zjh
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+      
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+    </div>
+</body>
+</html>

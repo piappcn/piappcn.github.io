@@ -1,37 +1,323 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang=中国>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="开发前 了解产品和设计 参加需求、交互、视觉会议，了解产品设计和项目成员。 了解产品面向的设备和平台 了解产品对多设别的适配和兼容性 了解产品对兼容性的要求以及是否采用响应式设计等。 了解产品要使用的技术（WEB 技术、HTML5，外部接口以及收费，系统限制，桌面技术、APP 技术、模板语言、混合模式，技术的兼容性稳定性和成本）  提出疑问和见解 在交互或视觉会议中结合技术要求，提出疑问和见解。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阶段任务注意事项">
+<meta property="og:url" content="http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/index.html">
+<meta property="og:site_name" content="HYTD">
+<meta property="og:description" content="开发前 了解产品和设计 参加需求、交互、视觉会议，了解产品设计和项目成员。 了解产品面向的设备和平台 了解产品对多设别的适配和兼容性 了解产品对兼容性的要求以及是否采用响应式设计等。 了解产品要使用的技术（WEB 技术、HTML5，外部接口以及收费，系统限制，桌面技术、APP 技术、模板语言、混合模式，技术的兼容性稳定性和成本）  提出疑问和见解 在交互或视觉会议中结合技术要求，提出疑问和见解。">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-07-05T12:47:40.417Z">
+<meta property="article:modified_time" content="2020-11-03T03:13:46.845Z">
+<meta property="article:author" content="hytd zjh">
+<meta property="article:tag" content="琥玥 科技">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>阶段任务注意事项</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
+    
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+    
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+    
+<link rel="stylesheet" href="/css/style.css">
 
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    
+<script src="/lib/jquery/jquery.min.js"></script>
 
-{% block content %}
+<meta name="generator" content="Hexo 5.3.0"></head>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
-
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">HYTD</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
     </div>
   </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
 
-{% endblock %}
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2020/10/30/fe-readme/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2020/07/05/FEHandover/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&text=阶段任务注意事项"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&title=阶段任务注意事项"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&is_video=false&description=阶段任务注意事项"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=阶段任务注意事项&body=Check out this article: http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&title=阶段任务注意事项"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&title=阶段任务注意事项"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&title=阶段任务注意事项"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&title=阶段任务注意事项"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&name=阶段任务注意事项&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E5%89%8D"><span class="toc-number">1.</span> <span class="toc-text">开发前</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3%E4%BA%A7%E5%93%81%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.1.</span> <span class="toc-text">了解产品和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E5%87%BA%E7%96%91%E9%97%AE%E5%92%8C%E8%A7%81%E8%A7%A3"><span class="toc-number">1.2.</span> <span class="toc-text">提出疑问和见解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E8%B0%83%E7%A0%94%E5%92%8C%E5%9F%B9%E8%AE%AD"><span class="toc-number">1.3.</span> <span class="toc-text">技术调研和培训</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E7%AE%97%E4%BA%BA%E5%8A%9B%E5%92%8C%E6%97%B6%E9%97%B4"><span class="toc-number">1.4.</span> <span class="toc-text">预算人力和时间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E4%B8%AD"><span class="toc-number">2.</span> <span class="toc-text">开发中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%8C%E8%B4%A3%E4%BB%BB%E5%8A%A1"><span class="toc-number">2.1.</span> <span class="toc-text">职责任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91"><span class="toc-number">2.2.</span> <span class="toc-text">页面开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E5%8F%96%E5%89%A5%E7%A6%BB"><span class="toc-number">2.3.</span> <span class="toc-text">提取剥离</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E5%90%8E"><span class="toc-number">3.</span> <span class="toc-text">开发后</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E6%B5%8B%E8%81%94%E8%B0%83"><span class="toc-number">3.1.</span> <span class="toc-text">自测联调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E9%AA%8C%E6%94%B6"><span class="toc-number">3.2.</span> <span class="toc-text">提交验收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E5%88%86%E4%BA%AB"><span class="toc-number">3.3.</span> <span class="toc-text">总结分享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E6%9B%B4%E7%BB%B4%E6%8A%A4"><span class="toc-number">3.4.</span> <span class="toc-text">变更维护</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        阶段任务注意事项
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">HYTD</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2020-07-05T12:47:40.417Z" itemprop="datePublished">2020-07-05</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <hr>
+<h2 id="开发前"><a href="#开发前" class="headerlink" title="开发前"></a>开发前</h2><hr>
+<h3 id="了解产品和设计"><a href="#了解产品和设计" class="headerlink" title="了解产品和设计"></a>了解产品和设计</h3><ul>
+<li>参加需求、交互、视觉会议，了解产品设计和项目成员。</li>
+<li>了解产品面向的设备和平台</li>
+<li>了解产品对多设别的适配和兼容性</li>
+<li>了解产品对兼容性的要求以及是否采用响应式设计等。</li>
+<li>了解产品要使用的技术（WEB 技术、HTML5，外部接口以及收费，系统限制，桌面技术、APP 技术、模板语言、混合模式，技术的兼容性稳定性和成本）</li>
+</ul>
+<h3 id="提出疑问和见解"><a href="#提出疑问和见解" class="headerlink" title="提出疑问和见解"></a>提出疑问和见解</h3><ul>
+<li>在交互或视觉会议中结合技术要求，提出疑问和见解。</li>
+<li>提出可能存在的问题（技术实现问题、性能，兼容问题等），协商解决方案（如优雅退化）并达成共识。</li>
+<li>提出已有新技术可能在产品中的应用场景，协助产品创新。</li>
+</ul>
+<h3 id="技术调研和培训"><a href="#技术调研和培训" class="headerlink" title="技术调研和培训"></a>技术调研和培训</h3><ul>
+<li>是否需要技术调研，提出可能存在的风险。</li>
+<li>进行技术调研，产出技术 demo，展示 demo，反馈调研结果。</li>
+<li>技术调研的内容可以先咨询经验丰富的前端工程师或前端技术组。</li>
+<li>经验不足或新入职员工，可提出培训申请。</li>
+</ul>
+<h3 id="预算人力和时间"><a href="#预算人力和时间" class="headerlink" title="预算人力和时间"></a>预算人力和时间</h3><ul>
+<li>根据项目时间要求及工作量，预算人力和时间。</li>
+<li>预算开发周期和阶段性产出。</li>
+<li>提醒需求方在项目管理平台中创建项目并加入项目成员，创建 GIT 并设置成员权限。</li>
+</ul>
+<hr>
+<h2 id="开发中"><a href="#开发中" class="headerlink" title="开发中"></a>开发中</h2><hr>
+<h3 id="职责任务"><a href="#职责任务" class="headerlink" title="职责任务"></a>职责任务</h3><ul>
+<li>确定一个页面工程师负责人，他将负责对整个页面开发工作做统筹规划、分配协调等管理工作和主开发职责。</li>
+<li>确认交互原型或视觉效果已经定稿，再开始开发工作。</li>
+<li>如果采取并行模式（视觉设计和页面开发同时进行），则以交互原型定稿为准（当视觉效果定稿后，页面工程师再补充细节），开始分配。</li>
+<li>按页面类型分配，同一类型页面分配给同一个人。</li>
+<li>每个人都要了解页面公共元素（多个页面中相同或相似部分），一个公共元素只分配到一个人，每人完成自身页面的同时完成“提取剥离”，你可能需要了解“分类方法规范”。</li>
+<li>在项目管理平台中创建细分的开发任务，填写任务详情和时间，如果任务间存在关系，则设置好关联或从属关系。</li>
+</ul>
+<h3 id="页面开发"><a href="#页面开发" class="headerlink" title="页面开发"></a>页面开发</h3><ul>
+<li>创建前端目录，咨询和和和上级领导</li>
+<li>和交互、视觉及其他前端工程师或后端工程师保持良好的沟通。</li>
+<li>及时反馈问题和建议：对效果疑问的确认、对状态缺失的补充、对优雅退化的建议、对行为结构的说明等等。</li>
+<li>如果采取并行模式（页面开发和 JS 开发同时进行），则以交互原型定稿为准，JS 开发工程师可并行开发业务逻辑层，当页面开发完成后再嵌入 UI 层。</li>
+</ul>
+<h3 id="提取剥离"><a href="#提取剥离" class="headerlink" title="提取剥离"></a>提取剥离</h3><ul>
+<li>页面开发的同时提取布局（grid）、模块（module）、元件（unit）至对应的 HTML 文件。</li>
+<li>避免重复劳动，对页面元素一目了然，在增加元素时首先来此目录查找是否已经实现或有相似实现而只需扩展。</li>
+<li>“提取剥离”目录中的 HTML 文件和“页面开发”目录中的 HTML 文件需保持同步维护。</li>
+</ul>
+<hr>
+<h2 id="开发后"><a href="#开发后" class="headerlink" title="开发后"></a>开发后</h2><hr>
+<h3 id="自测联调"><a href="#自测联调" class="headerlink" title="自测联调"></a>自测联调</h3><ul>
+<li>更新、合并、解决冲突、提交。</li>
+<li>对自己的代码进行全面的多设备测试和兼容性测试。</li>
+<li>如果自测过程中发现别人写的代码有问题，及时反馈。</li>
+</ul>
+<h3 id="提交验收"><a href="#提交验收" class="headerlink" title="提交验收"></a>提交验收</h3><ul>
+<li>当有阶段性产出后，页面工程师将页面提交给设计师，进行效果验收。</li>
+<li>效果验收将主要检查视觉效果符合度（尺寸、位置、颜色、切图等）。</li>
+<li>如有必要，可以同时提交给经验丰富的前端工程师或前端技术组，进行代码验收。</li>
+<li>代码验收将主要检查兼容性、HTML 规范和 CSS 规范。</li>
+</ul>
+<h3 id="总结分享"><a href="#总结分享" class="headerlink" title="总结分享"></a>总结分享</h3><ul>
+<li>分享内容可以包含：架构思想、协作心得、设备特性介绍、新技术应用、调研展示、遇到的问题和解决方案等。</li>
+<li>分享对象不限于：交互、视觉、前端及所有感兴趣的人。</li>
+</ul>
+<h3 id="变更维护"><a href="#变更维护" class="headerlink" title="变更维护"></a>变更维护</h3><ul>
+<li>如果未经过需求变更和设计变更，原则上不允许直接进行开发变更。</li>
+<li>变更前应了解变更原因，变更后应该及时通知后续开发工程师。</li>
+<li>如果静态资源的版本号不是自动完成更新，你可能需要手动更新版本号。</li>
+<li>变更和维护使用本规范中所有流程，即你可能需要重复之前部分流程。</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+      </div>
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E5%89%8D"><span class="toc-number">1.</span> <span class="toc-text">开发前</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3%E4%BA%A7%E5%93%81%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.1.</span> <span class="toc-text">了解产品和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E5%87%BA%E7%96%91%E9%97%AE%E5%92%8C%E8%A7%81%E8%A7%A3"><span class="toc-number">1.2.</span> <span class="toc-text">提出疑问和见解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E8%B0%83%E7%A0%94%E5%92%8C%E5%9F%B9%E8%AE%AD"><span class="toc-number">1.3.</span> <span class="toc-text">技术调研和培训</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E7%AE%97%E4%BA%BA%E5%8A%9B%E5%92%8C%E6%97%B6%E9%97%B4"><span class="toc-number">1.4.</span> <span class="toc-text">预算人力和时间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E4%B8%AD"><span class="toc-number">2.</span> <span class="toc-text">开发中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%8C%E8%B4%A3%E4%BB%BB%E5%8A%A1"><span class="toc-number">2.1.</span> <span class="toc-text">职责任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91"><span class="toc-number">2.2.</span> <span class="toc-text">页面开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E5%8F%96%E5%89%A5%E7%A6%BB"><span class="toc-number">2.3.</span> <span class="toc-text">提取剥离</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E5%90%8E"><span class="toc-number">3.</span> <span class="toc-text">开发后</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E6%B5%8B%E8%81%94%E8%B0%83"><span class="toc-number">3.1.</span> <span class="toc-text">自测联调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E9%AA%8C%E6%94%B6"><span class="toc-number">3.2.</span> <span class="toc-text">提交验收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E5%88%86%E4%BA%AB"><span class="toc-number">3.3.</span> <span class="toc-text">总结分享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E6%9B%B4%E7%BB%B4%E6%8A%A4"><span class="toc-number">3.4.</span> <span class="toc-text">变更维护</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&text=阶段任务注意事项"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&title=阶段任务注意事项"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&is_video=false&description=阶段任务注意事项"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=阶段任务注意事项&body=Check out this article: http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&title=阶段任务注意事项"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&title=阶段任务注意事项"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&title=阶段任务注意事项"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&title=阶段任务注意事项"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/07/05/FEDevelopmentOfAttention/&name=阶段任务注意事项&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 hytd zjh
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+      
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+    </div>
+</body>
+</html>
